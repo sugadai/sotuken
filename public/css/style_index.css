@@ -1,0 +1,431 @@
+* {
+	float: none;
+	position: static;
+}
+ 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+  html {
+    font-size: 100%;
+    /* max-height: 100%; */
+  }
+  
+  *{
+    margin: 0;
+    padding:0;
+  }
+
+
+  body {
+    color: #383e45;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  .header {
+    display: flex;
+    width: 100%;
+    line-height: 1px;
+    padding: 10px 0;
+  }
+  
+  
+  .site-title a {
+    display: block;
+  }
+ 
+  
+  .section-title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+  }
+  
+  .content-title {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+  }
+  
+  /*-------------------------------------------
+  ボタン
+  -------------------------------------------*/
+  .button{
+    background-color:white;
+    border: #f7f7f7;
+    cursor: pointer;
+  }
+  
+  
+
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+
+
+
+  
+  
+  
+  
+  /*-------------------------------------------
+  logo
+  -------------------------------------------*/
+  #logo {
+    margin-bottom: 80px;
+  }
+  #logo img {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: contain;
+  }
+  
+  /*-------------------------------------------
+  about
+  -------------------------------------------*/
+  #about ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #about li {
+    width: 32%;
+  }
+
+  
+  /*-------------------------------------------
+  introduction
+  -------------------------------------------*/
+  #introduction ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #introduction li {
+    width: 32%;
+  }
+
+
+  /*-------------------------------------------
+  footer
+  -------------------------------------------*/
+  #footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /*-------------------------------------------
+  SP
+  -------------------------------------------*/
+  @media screen and (max-width: 480px) {
+  
+  /*-------------------------------------------
+  about
+  -------------------------------------------*/
+    #about ul {
+      flex-direction: column;
+    }
+    #about li {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+  /*-------------------------------------------
+  introduction
+  -------------------------------------------*/
+    #introduction ul {
+      flex-direction: column;
+    }
+    #introduction li {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  section{
+  background-color: #f7f7f7;
+  height: 250px;}
+  
+
+  .subMenu-1{
+    position: absolute;
+    background-color: #f7f7f7;
+}
+
+.subMenu-1 ul li{
+  display: block;
+}
+
+.site-title {
+  width: 120px;
+  line-height: 1px;
+  padding: 10px 0;
+}
+/* .site-title a {
+  display: block;
+  color: #24292e;
+} */
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #383e45;
+}
+.content-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  position:fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+#header li {
+  margin-left: 30px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+@media screen and (max-width:502px){
+  html{
+     font-size: 100%; 
+  } 
+  #header{
+    display: none;
+  }
+  
+  .button{
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+  }
+  .openbtn1{
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    background:#e499b9;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    border-radius: 5px;
+  }
+  #g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+    top:0;
+    right: -120%;
+    width:100%;
+    height: 100vh;/*ナビの高さ*/
+    background:#D54884;
+    /*動き*/
+    transition: all 0.6s;
+  }
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+  list-style: none;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+#g-nav li a{
+  color: rgb(251, 248, 248);
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+  position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+  top:10px;
+  right: 10px;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+  
+/*×に変化*/  
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background-color: rgb(248, 248, 248);
+    width: 45%;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+  font-size:1.2rem;
+}
+
+h2{
+  font-size:1.2rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+p{
+  margin-top:20px;  
+}
+
+small{
+  color:#fff;
+  display: block;
+  text-align: center;
+}
+
+#header{
+  width:100%;
+  background:#333;
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+}
+
+section{
+  padding:100px 30px;
+}
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+#footer{
+  background:#333;
+  padding:20px;
+}
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+
+

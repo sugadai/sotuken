@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "forever start app.js",
+    "stop": "forever stop app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "csv-stringify": "^6.2.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-mysql-session": "^2.1.8",
+    "express-session": "^1.17.3",
+    "forever": "^4.0.3",
+    "iconv-lite": "^0.6.3",
+    "jsdom": "^20.0.1",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.9.0",
+    "nodemon": "^2.0.20",
+    "python-shell": "^3.0.1",
+    "socket.io": "^4.6.0"
+  },
+  "description": ""
+}

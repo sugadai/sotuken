@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/style_index.css">
+<!-- <meta name="viewport" content="width=device-width"> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+<title>トップページ</title>
+<link rel="icon" href="/image/logo.png">
+<!-- <script type="text/javascript" src="script.js"></script> -->
+</head>
+  <body>
+    <div class="header" style="display: none;">
+      <div class="openbtn1"><span></span><span></span><span></span></div>
+      <nav id="g-nav">
+        <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#introduction">IntroductioN</a></li>
+          <li >
+            <form action="/login" method="get">
+              <input type="submit" class="button" value="ログイン" style="appearance: none;">
+            </form>
+          </li>
+          <li>
+            <form action="/signup" method="get">
+              <input type="submit" class="button" value="新規登録">
+            </form>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+    
+  <header id="header" class="wrapper">
+    <h1 class="site-title"><a href="">HOME</a></h1>
+    <!-- <nav> -->
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#introduction">IntroductioN</a></li>
+        <li id="loginform">
+          <form action="/login" method="get">
+            <input type="submit" class="button" value="ログイン">
+          </form>
+        </li>
+        <li id="signupform">
+          <form action="/signup" method="get">
+            <input type="submit" class="button" value="新規登録">
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+     <main>
+      <div id="logo">
+        <img src="/image/logo.png">
+      </div>
+
+      <section id="about" class="wrapper">
+        <h2 class="section-title">AbouT</h2>
+        <div class="content">
+          <div class="text">
+            <h3 class="content-title">サービスについて</h3>
+            <p>
+	予防医療の二次予防である「病気を重篤化させない」を目的とした、
+  心拍測定デバイスとwebアプリによるリアルタイム健康管理サービスです。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="introduction" class="wrapper">
+        <h2 class="section-title">IntroductioN</h2>
+        <div class="content">
+          <div class="text">
+            <h3 class="content-title">制作チームから</h3>
+            <p>
+	私たちシステム４班は卒業研究2022に向け、今まで学んできたITの知識を生かし、
+	医療スタッフの負担軽減や予防医療の実現に向けた医療サービスを研究開発しています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="how_to_use" class="wrapper">
+        <h2 class="section-title">How To Ues</h2>
+        <h3 class="content-title">操作手順</h3>
+        <img src="../image/one1b.png" class="image_item">
+        <img src="../image/two2b.png" class="image_item">
+        <img src="../image/three3b.png" class="image_item">
+        <img src="../image/four4b.png" class="image_item">
+      </section> -->
+
+      <!-- <section > -->
+        
+      <!-- </section> -->
+      
+    </main>
+
+    <footer id="footer">
+      <p>Copyright © 2022 FOURTH All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+
+<script>
+  
+  $(".openbtn1").click(function () {//ボタンがクリックされたら
+  $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+  });
+
+  $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+      $(".openbtn1").removeClass('active');//ボタンの activeクラスを除去し
+      $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+  });
+  $(window).on('resize', function(){
+  var windowSize = $(window).width();
+
+  if (windowSize < 503) {
+    console.log('502以下です')
+    $('.header').show();
+  } else if(windowSize >= 503){
+    console.log('503以上です')
+    $('.header').css('display','none');
+
+  }
+});
+  // window.onresize = function () {
+  //   var windowSize = window.innerWidth
+  //   // console.log(windowSize)
+  //   if (windowSize < 503) {
+  //     $('.header').show();
+  //   }else if(windowSize >= 503){
+      // $('.header').css('display','none');
+  //   }
+  // };
+</script>
+
+</html>
